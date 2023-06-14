@@ -75,7 +75,9 @@ export default function Counter() {
         </h3>
       </div>
       <div>
-        {counter.count !== 0 && <button onClick={handleReset}>Reset</button>}
+        {counter.count !== 0 || counter.step !== 1 ? (
+          <button onClick={handleReset}>Reset</button>
+        ) : null}
       </div>
     </>
   );
